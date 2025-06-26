@@ -4,7 +4,7 @@ import Phone from './phone-tablet.jpeg';
 import Laptop from './laptop.jpeg';
 import Fashion from './Fashion.jpeg';
 import furniture from './furniture.jpeg';
-import sports from './sports.jpeg';
+import sports from './Sports.jpeg';
 import food from './food.jpeg';
 import {Link} from 'react-router-dom';
 
