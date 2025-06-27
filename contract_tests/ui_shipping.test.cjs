@@ -35,10 +35,11 @@ describe("ShippingService Pact", () => {
             "Content-Type": "application/json",
           },
           body: {
-            orderId: integer(1),
-            userId: integer(1),
-            address: like("123 Main St, City, 123456"),
-          },
+  orderId: uuid("550e8400-e29b-41d4-a716-446655440001"),
+  userId: uuid("550e8400-e29b-41d4-a716-446655440002"),
+  address: like("123 Main St, City, 123456"),
+}
+,
         },
         willRespondWith: {
           status: 200,
@@ -46,10 +47,10 @@ describe("ShippingService Pact", () => {
             "Content-Type": "application/json",
           },
           body: {
-            trackingId: uuid("550e8400-e29b-41d4-a716-446655440000"),
-            orderId: integer(1),                                      
-            status: like("Pending")
-          },
+  trackingId: uuid("550e8400-e29b-41d4-a716-446655440000"),
+  orderId: uuid("550e8400-e29b-41d4-a716-446655440001"),
+  status: like("Pending"),
+},
         },
       })
     );
